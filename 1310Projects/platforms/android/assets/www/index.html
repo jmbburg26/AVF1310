@@ -1,38 +1,61 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css">
+        
+        
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="cordova_plugins.js"></script>
+        
+        <title>Sherlock Homework Tracker</title>
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
+            <h1>SherlockHT</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+                <p class="event listening">Readying</p>
+                <p class="event received">John Brandenburg</p>
             </div>
         </div>
+        <div data-role="page" id="page">
+            <div data-role="header">
+                <h1>AVF1310</h1>
+            </div>
+            <div data-role="content">
+                <h3>iOS/Android Native Features</h3>
+                <ul data-role="listview">
+                    <li><a href="#">Calandar</a></li>
+                    <li><a href="#">File System</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Network</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+            <div data-role="content">
+                <h3>JSON-P Data APIs</h3>
+                <ul data-role="listview">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+            <div data-role="content">
+                <h3>Research</h3>
+                <ul data-role="listview">
+                    <li><a href="#">Week one</a></li>
+                    <li><a href="#">Week two</a></li>
+                    <li><a href="#">Week three</a></li>
+                    <li><a href="#">Week four</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
