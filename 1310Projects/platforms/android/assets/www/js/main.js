@@ -1,22 +1,26 @@
-//Function to get the user search term from search field
-var storeData = function (){
- 
-    var	searchTag = $('#searchtag').val();
-
-    console.log(searchTag);
-    return searchTag;
-};
-
-
 $('#submit').on('click', function (){
-    
+    storeData();
+    console.log(searchTag);
 });
 
+//Function to get the user search term from search field
+var storeData = function (key){
+    if(!key){
+            var userValues      = Math.floor(Math.random()*100000001);
+        }else{
+            userValues = key;
+        }
+      
+    var key    = Math.floor(Math.random()*100000001);
 
+    var	searchTag = $('#searchtag').val();
+
+    localStorage.setItem(key, JSON.stringify(searchTag));
+    //console.log(searchTag);
+    return searchTag
+};
 
 var searchResults = $(function(searchTag){
-
-	var	searchTag = $('#searchtag').val();
 
 	var url = "https://api.instrgram.com/vl/tags/" + searchTag + "media/recent?callback=?&amp;client_id=xxxxxx";
 	
