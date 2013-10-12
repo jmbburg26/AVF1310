@@ -44,7 +44,7 @@
                 <h3>JSON-P Data APIs</h3>
                 <ul data-role="listview">
                     <li><a href="#social">Instagram</a></li>
-                    <li><a href="#social">Facebook</a></li>
+                    <li><a href="#news">USA Today</a></li>
                 </ul>
             </div>
 
@@ -53,7 +53,7 @@
 	            <div data-role="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#browse" data-icon="grid">Browse</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -64,7 +64,7 @@
 	    <!-- Social Page -->
 	    <section data-role="page" id="social">
             <div data-role="header">
-                <h1>Social APIs</h1>
+                <h1>Social API</h1>
             </div>
             <div>
                 <form>
@@ -80,15 +80,15 @@
 			</div>
 			<!-- Container for returned search data -->
 			<div>
-				<ul id="data-output"></ul>
-					<li id="data-msg"><h2>Instagram Results</h2></li>
+				<dic id="data-msg"><h2>Instagram Results</h2></div>
+				<ul id="data-output"></ul>	
 			</div>
             <!-- Persistant Footer Navigation -->
             <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
 	            <div data-role="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#browse" data-icon="grid">Browse</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -96,6 +96,29 @@
 	        </div>
 	    </section>
 
+	    <!-- News Page -->
+	    <section data-role="page" id="news">
+            <div data-role="header">
+                <h1>News API</h1>
+            </div>
+     
+			<!-- Container for returned search data -->
+			<div>
+				<dic id="news-msg"><h2>Top Stories</h2></div>
+				<ul id="news-output"></ul>	
+			</div>
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
 	    <!-- Research Page -->
         <section data-role="page" id="research">
         	<div data-role="header">
@@ -237,7 +260,7 @@
 	                    <div data-role="navbar">
 	                        <ul>
 	                            <li><a href="#home" data-icon="home">Home</a></li>
-	                            <li><a href="#browse" data-icon="grid">Browse</a></li>
+	                            <li><a href="#news" data-icon="grid">News</a></li>
 	                            <li><a href="#social" data-icon="plus">Social</a></li>
 	                            <li><a href="#research" data-icon="info">Research</a></li>
 	                        </ul>
