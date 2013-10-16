@@ -2,7 +2,7 @@
 $('#submit').on('click', function(){
  	var	searchTag = $('#searchtag').val();
 		console.log(searchTag);
-		
+		event.preventDefault();
 		var url = "https://api.instagram.com/v1/tags/" + searchTag + "/media/recent?callback=?&amp;client_id=fc637f7a1bd04468be5f4fd4bbbea550&amp;min_id=10";
 		console.log(url);
 		
@@ -47,4 +47,24 @@ $('#news').on('pageinit', function(){
 					$("#news-output").append(news);
 				});
 		};
+
+/*
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+	$("#nav-camera").on("click", cameraFn);
+	$("#nav-instagram").on("click", instagramFn);
+	$("#nav-compass").on("click", compassFn);
+	//etc...	
+}; // phonegap deviceready
+var cameraFn = function() {
+	//load camera immediately? load buttons first?	
+}; // end cameraFn
+var instagramFn = function() {
+	//check for connection? load data?	
+};// end instagramFn
+var compassFn = function() {
+	//do something	
+};// end compassFn
+*/
 });
