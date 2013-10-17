@@ -1,3 +1,63 @@
+//Code for Native Features
+
+document.addEventListener("deviceready", notiFire, false);
+//Notification Call
+$('#notification').on('click', function(){
+	notiFire();
+});
+
+var notiFire = function(){
+	document.addEventListener("deviceready", onDeviceReady, false);
+
+	var alertDismissed = function() {
+	    // do something
+	}
+
+
+	var onDeviceReady = function() {
+		navigator.notification.alert(
+		    'Your Notification Worked',  	// message
+		    alertDismissed,         		// callback
+		    'Notification Test',    		// title
+		    ''                  		// buttonName
+		);
+	};
+};
+ 
+//Network Info Call
+$('#network').on('click', function(){
+	netFire();
+});
+
+var netFire = function(){
+	document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        checkConnection();
+    }
+
+        function checkConnection() {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+
+            alert('Connection type: ' + states[networkState]);
+        }
+};
+ 
+//Device Info Call
+$('#network').on('click', function(){
+	netFire();
+});
+
 //Code for Instagram API
 $('#submit').on('click', function(){
  	var	searchTag = $('#searchtag').val();
@@ -26,6 +86,7 @@ var screenOutput = function(info){
 
 
 $('#news').on('pageinit', function(){
+        
         //Code for USA Today
 		$(function(){
 				var url = "http://api.usatoday.com/open/articles/mobile/topnews?api_key=rafzauu4bcfd33yg379mjn9e";
@@ -47,24 +108,4 @@ $('#news').on('pageinit', function(){
 					$("#news-output").append(news);
 				});
 		};
-
-/*
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-	$("#nav-camera").on("click", cameraFn);
-	$("#nav-instagram").on("click", instagramFn);
-	$("#nav-compass").on("click", compassFn);
-	//etc...	
-}; // phonegap deviceready
-var cameraFn = function() {
-	//load camera immediately? load buttons first?	
-}; // end cameraFn
-var instagramFn = function() {
-	//check for connection? load data?	
-};// end instagramFn
-var compassFn = function() {
-	//do something	
-};// end compassFn
-*/
 });
