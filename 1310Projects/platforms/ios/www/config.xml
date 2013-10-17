@@ -8,7 +8,8 @@
         PhoneGap Team
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
-    <feature name="Notification">
+   
+   <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
     <feature name="NetworkStatus">
@@ -20,6 +21,7 @@
     <feature name="FileTransfer">
         <param name="ios-package" value="CDVFileTransfer" />
     </feature>
+
     <access origin="*" />
     <access origin="http://*.usatoday.com" />
     <access origin="http://*.google.com" />

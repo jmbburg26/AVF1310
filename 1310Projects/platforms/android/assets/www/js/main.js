@@ -26,6 +26,7 @@ var screenOutput = function(info){
 
 
 $('#news').on('pageinit', function(){
+        
         //Code for USA Today
 		$(function(){
 				var url = "http://api.usatoday.com/open/articles/mobile/topnews?api_key=rafzauu4bcfd33yg379mjn9e";
@@ -47,24 +48,26 @@ $('#news').on('pageinit', function(){
 					$("#news-output").append(news);
 				});
 		};
-
-/*
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-	$("#nav-camera").on("click", cameraFn);
-	$("#nav-instagram").on("click", instagramFn);
-	$("#nav-compass").on("click", compassFn);
-	//etc...	
-}; // phonegap deviceready
-var cameraFn = function() {
-	//load camera immediately? load buttons first?	
-}; // end cameraFn
-var instagramFn = function() {
-	//check for connection? load data?	
-};// end instagramFn
-var compassFn = function() {
-	//do something	
-};// end compassFn
-*/
 });
+//Code for Native Features
+
+document.addEventListener("deviceready", notiFire, false);
+
+//Notification Call
+
+
+var notiFire = function(){
+
+		navigator.notification.alert(
+		    'Your Notification Worked',  	// message
+		    alertDismissed,         		// callback
+		    'Notification Test',    		// title
+		    'Press OK to succed!'           // buttonName
+		);
+};
+
+var alertDismissed = function(){
+
+};
+
+
