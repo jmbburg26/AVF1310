@@ -1,3 +1,22 @@
+//Code for Native Features
+
+//Notification Call
+document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        $('#notify').on('click', function(){
+    	navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+
+
 //Code for Instagram API
 $('#submit').on('click', function(){
  	var	searchTag = $('#searchtag').val();
@@ -49,25 +68,3 @@ $('#news').on('pageinit', function(){
 				});
 		};
 });
-//Code for Native Features
-
-document.addEventListener("deviceready", notiFire, false);
-
-//Notification Call
-
-
-var notiFire = $('#notify').on('click', function(){
-
-		navigator.notification.alert(
-		    'Your Notification Worked',  	// message
-		    alertDismissed,         		// callback
-		    'Notification Test',    		// title
-		    'Press OK to succed!'           // buttonName
-		);
-};
-
-var alertDismissed = function(){
-
-});
-
-
