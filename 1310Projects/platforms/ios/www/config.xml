@@ -15,6 +15,9 @@
     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
+    </feature>
     <access origin="*" />
     <access origin="http://*.usatoday.com" />
     <access origin="http://*.google.com" />
