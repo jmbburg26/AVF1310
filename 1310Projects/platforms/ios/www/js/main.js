@@ -17,9 +17,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
             'Notification Alert', 
             'Clear' 
         );
+        navigator.notification.beep(1);
+        navigator.notification.vibrate(2000);
     }
 	
-//Notification Call
+//Network Call
 
 
 
