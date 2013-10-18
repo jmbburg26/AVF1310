@@ -1,19 +1,28 @@
 //Code for Native Features
-
 //Notification Call
 document.addEventListener("deviceready", onDeviceReady, false);
 
-    // device APIs are available
-    //
     function onDeviceReady() {
-        $('#notify').on('click', function(){
-    	navigator.notification.alert(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
+
+    }
+
+    function alertDismissed() {
+           
+    }
+
+    function showAlert() {
+        navigator.notification.alert(
+            'AVF 1310 Demo!',  	
+            alertDismissed,      
+            'Notification Alert', 
+            'Clear' 
         );
     }
+	
+//Notification Call
+
+
+
 
 
 

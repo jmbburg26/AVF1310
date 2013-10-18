@@ -11,6 +11,9 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="Notification">
+    	<param name="android-package" value="org.apache.cordova.Notification" />
+	</feature>
     <access origin="http://127.0.0.1*" />
     <access origin="*" />
     <access origin="http://*.google.com" />
