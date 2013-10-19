@@ -66,7 +66,8 @@
 
 // Geolocation Call
 	var getLocation = function(){
-
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		
 		var onSuccess = function(position) {
 	    alert('Latitude: '          + position.coords.latitude          + '\n' +
 	          'Longitude: '         + position.coords.longitude         + '\n' +
