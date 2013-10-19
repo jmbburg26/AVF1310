@@ -35,8 +35,9 @@
                 <ul data-role="listview">
                 	<li><a href="#notify" >Notification</a></li>
                 	<li><a href="#network">Network</a></li>
-                	<li><a href="#file">File System</a></li>
                 	<li><a href="#camera">Camera</a></li>
+                	<li><a href="#location">Geolocation</a></li>
+                	<li><a href="#compass">Compass</a></li>
                 </ul>
             </div>
             <div data-role="content">
@@ -66,7 +67,7 @@
                 <h1>Notification Test</h1>
             </div>
             <div>
-            	<input type="button" onclick="showAlert(); return false;" value="Test Notification">
+            	<input type="button" id="notificationtest" value="Test Notification">
 			</div>
 
             <!-- Persistant Footer Navigation -->
@@ -88,7 +89,7 @@
                 <h1>Network Test</h1>
             </div>
             <div>
-				<input type="button" onclick="checkConnection(); return false;" value="Test Network">
+				<input type="button" id="networktest" value="Test Network">
 			</div>
 
             <!-- Persistant Footer Navigation -->
@@ -105,34 +106,12 @@
 	    </section>
 
 	    <!-- File System Page -->
-	    <section data-role="page" id="file">
-	    	<div data-role="header">
-                <h1>File System Test</h1>
-            </div>
-            <div>
-				<input type="button" id="testfile" value="Test" />
-			</div>
-
-            <!-- Persistant Footer Navigation -->
-            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
-	            <div data-role="navbar" id="navbar">
-	                <ul>
-	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
-	                    <li><a href="#social" data-icon="plus">Social</a></li>
-	                    <li><a href="#research" data-icon="info">Research</a></li>
-	                 </ul>
-	            </div>	
-	        </div>
-	    </section>
-
-	    <!-- Camera Page -->
 	    <section data-role="page" id="camera">
 	    	<div data-role="header">
                 <h1>Camera Test</h1>
             </div>
             <div>
-				<input type="button" id="testcam" value="Take Picture" />
+				<input type="button" id="getpicture" value="Take Picture">
 			</div>
 
             <!-- Persistant Footer Navigation -->
@@ -148,6 +127,49 @@
 	        </div>
 	    </section>
 
+	    <!-- Geolocation Page -->
+	    <section data-role="page" id="location">
+	    	<div data-role="header">
+                <h1>Geolocation Test</h1>
+            </div>
+            <div>
+				<input type="button" id="getgeolocation" value="Get Location">
+			</div>
+
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+
+	    <!-- Compass Page -->
+	    <section data-role="page" id="compass">
+	    	<div data-role="header">
+                <h1>Compass Test</h1>
+            </div>
+            <div>
+				<input type="button" id="compasstest" value="Test Compass">
+			</div>
+
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
 	    <!-- Social Page -->
 	    <section data-role="page" id="social">
             <div data-role="header">
@@ -314,39 +336,6 @@
 							</ul>
 						</div>
 	                </div>
-	                    
-	                <div data-role="collapsible" data-collapsed="true">
-	                    <h3>Week Four</h3>
-	                    <div data-role="content" data-id="newsstream">
-							<ul>
-								<li>
-									<p>
-									
-									</p>
-	                            </li>
-	                            <li>
-									<p>
-									
-									</p>
-	                            </li>
-	                            <li>
-									<p>
-									
-									</p>
-	                            </li>
-	                            <li>
-									<p>
-									
-									</p>
-	                            </li>
-	                            <li>
-									<p>
-									
-									</p>
-	                            </li>
-							</ul>
-						</div>
-					</div>
 
 	                    <!-- Persistant Footer Navigation -->
 	                <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">

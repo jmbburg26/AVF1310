@@ -1,16 +1,17 @@
 //Code for Native Features
 //Notification Call
-document.addEventListener("deviceready", onDeviceReady, false);
+	document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
-
+    	$("#notificationtest").on('click', notifyTest);
+    	$("#networktest").on('click', netTest);
+    	$("#getpicture").on('click', getPic);
+    	$("#getgeolocation").on('click', getLocation);
+    	$("#compasstest").on('click', getCompass);
     }
 
-    function alertDismissed() {
-           
-    }
-
-    function showAlert() {
+//Notification Call 
+    var notifyTest = function() {
         navigator.notification.alert(
             'AVF 1310 Demo!',  	
             alertDismissed,      
@@ -19,11 +20,12 @@ document.addEventListener("deviceready", onDeviceReady, false);
         );
         navigator.notification.beep(1);
         navigator.notification.vibrate(2000);
-    }
+    };
+
 	
 //Network Status Call
 
-	function checkConnection() {
+	var netTest = function() {
             var networkState = navigator.connection.type;
 
             var states = {};
@@ -37,14 +39,58 @@ document.addEventListener("deviceready", onDeviceReady, false);
             states[Connection.NONE]     = 'No network connection';
 
             navigator.notification.alert(
-            'Connection type: ' + states[networkState],  	
-            alertDismissed,      
-            'Connection Alert', 
-            'Clear' 
-        );
+	            'Connection type: ' + states[networkState],  	
+	            alertDismissed,      
+	            'Connection Alert', 
+	            'Clear' 
+        	);
         navigator.notification.beep(1);
         navigator.notification.vibrate(2000);
-    }
+    };
+
+//Camera Call
+	var getPic = function(){
+		navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    	destinationType: Camera.DestinationType.DATA_URL
+		});
+
+		var onSuccess = function(imageData) {
+		    var image = document.getElementById('myImage');
+		    image.src = "data:image/jpeg;base64," + imageData;
+		}
+
+		var onFail = function(message) {
+	    	alert('Failed because: ' + message);
+		}
+	};
+
+// Geolocation Call
+	var getLocation = function(){
+
+		var onSuccess = function(position) {
+	    alert('Latitude: '          + position.coords.latitude          + '\n' +
+	          'Longitude: '         + position.coords.longitude         + '\n' +
+	          'Timestamp: '         + position.timestamp                + '\n');
+		};
+
+		function onError(error) {
+		    alert('code: '    + error.code    + '\n' +
+		          'message: ' + error.message + '\n');
+		}
+	}; 
+
+
+//Compass Call
+	var getCompass = function(){
+		navigator.compass.getCurrentHeading(onSuccess, onError);
+		function onSuccess(heading) {
+		    alert('Heading: ' + heading.magneticHeading);
+		};
+
+		function onError(error) {
+		    alert('CompassError: ' + error.code);
+		};
+	};
 
 
 
@@ -75,7 +121,7 @@ var screenOutput = function(info){
 };
 
 
-
+/*
 $('#news').on('pageinit', function(){
         
         //Code for USA Today
@@ -93,10 +139,11 @@ $('#news').on('pageinit', function(){
 
 				$("#data-msg").html("<h2>Top Stories:</h2>");
 
-				$.each(info.data, function(index, photo){
-					var news = "<li><img src=" + photo.images.standard_resolution.url + "' alt='" + photo.user.id + "' /><h4>" + photo.user.full_name + ", <em>(" + photo.user.username +")</em></h4></li>";
+				$.each(info.data, function(index, news){
+					var news = "<li><a src=" + photo.images.standard_resolution.url + "' alt='" + photo.user.id + "' /></li>";
 
 					$("#news-output").append(news);
 				});
 		};
 });
+*/
