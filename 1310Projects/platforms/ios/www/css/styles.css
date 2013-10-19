@@ -14,10 +14,5 @@ p{
 
 #navbar{
 	color: black;
-}
-
-.offline {
-	visibility: hidden;
-	color: #f00;
-	font-style: italic;
+	background-color: white;
 }
