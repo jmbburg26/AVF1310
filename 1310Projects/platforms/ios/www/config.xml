@@ -9,12 +9,17 @@
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
    
+<<<<<<< HEAD
    <feature name="Notification">
+=======
+    <feature name="Notification">
+>>>>>>> master
         <param name="ios-package" value="CDVNotification" />
     </feature>
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
+<<<<<<< HEAD
     <feature name="File">
         <param name="ios-package" value="CDVFile" />
     </feature>
@@ -22,6 +27,17 @@
         <param name="ios-package" value="CDVFileTransfer" />
     </feature>
 
+=======
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <feature name="Compass">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
+>>>>>>> master
     <access origin="*" />
     <access origin="http://*.usatoday.com" />
     <access origin="http://*.google.com" />
