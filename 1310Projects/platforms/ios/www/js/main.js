@@ -54,12 +54,12 @@
     	destinationType: Camera.DestinationType.DATA_URL
 		});
 
-		var onSuccess = function(imageData) {
+		function onSuccess(imageData) {
 		    var image = document.getElementById('myImage');
 		    image.src = "data:image/jpeg;base64," + imageData;
 		}
 
-		var onFail = function(message) {
+		function onFail(message) {
 	    	alert('Failed because: ' + message);
 		}
 	};
