@@ -10,6 +10,10 @@
     	$("#compasstest").on('click', getCompass);
     }
 
+    function alertDismissed() {
+            // do something
+    }
+    
 //Notification Call 
     var notifyTest = function() {
         navigator.notification.alert(
@@ -79,6 +83,7 @@
 		          'message: ' + error.message + '\n');
 		}
 	}; 
+
 
 
 //Compass Call
