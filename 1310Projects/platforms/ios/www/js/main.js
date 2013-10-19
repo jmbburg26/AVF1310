@@ -10,6 +10,10 @@
     	$("#compasstest").on('click', getCompass);
     }
 
+    function alertDismissed() {
+            // do something
+    }
+    
 //Notification Call 
     var notifyTest = function() {
         navigator.notification.alert(
@@ -54,20 +58,21 @@
     	destinationType: Camera.DestinationType.DATA_URL
 		});
 
-		var onSuccess = function(imageData) {
+		function onSuccess(imageData) {
 		    var image = document.getElementById('myImage');
 		    image.src = "data:image/jpeg;base64," + imageData;
 		}
 
-		var onFail = function(message) {
+		function onFail(message) {
 	    	alert('Failed because: ' + message);
 		}
 	};
 
 // Geolocation Call
 	var getLocation = function(){
-
-		var onSuccess = function(position) {
+		navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		
+		function onSuccess(position) {
 	    alert('Latitude: '          + position.coords.latitude          + '\n' +
 	          'Longitude: '         + position.coords.longitude         + '\n' +
 	          'Timestamp: '         + position.timestamp                + '\n');
@@ -80,9 +85,11 @@
 	}; 
 
 
+
 //Compass Call
 	var getCompass = function(){
 		navigator.compass.getCurrentHeading(onSuccess, onError);
+		
 		function onSuccess(heading) {
 		    alert('Heading: ' + heading.magneticHeading);
 		};

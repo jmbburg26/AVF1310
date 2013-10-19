@@ -37,6 +37,12 @@
     <feature name="Compass">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+<<<<<<< HEAD
+>>>>>>> master
+=======
+    <feature name="Accelerometer">
+        <param name="ios-package" value="CDVAccelerometer" />
+    </feature>
 >>>>>>> master
     <access origin="*" />
     <access origin="http://*.usatoday.com" />
