@@ -68,7 +68,7 @@
 	var getLocation = function(){
 		navigator.geolocation.getCurrentPosition(onSuccess, onError);
 		
-		var onSuccess = function(position) {
+		function onSuccess(position) {
 	    alert('Latitude: '          + position.coords.latitude          + '\n' +
 	          'Longitude: '         + position.coords.longitude         + '\n' +
 	          'Timestamp: '         + position.timestamp                + '\n');
@@ -84,6 +84,7 @@
 //Compass Call
 	var getCompass = function(){
 		navigator.compass.getCurrentHeading(onSuccess, onError);
+		
 		function onSuccess(heading) {
 		    alert('Heading: ' + heading.magneticHeading);
 		};
