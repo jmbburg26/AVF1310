@@ -98,12 +98,20 @@
 		    alert('CompassError: ' + error.code);
 		};
 	};
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> gh-pages
 
 //Code for Instagram API
 $('#submit').on('click', function(){
  	var	searchTag = $('#searchtag').val();
+		
 		console.log(searchTag);
 		event.preventDefault();
+		
 		var url = "https://api.instagram.com/v1/tags/" + searchTag + "/media/recent?callback=?&amp;client_id=fc637f7a1bd04468be5f4fd4bbbea550&amp;min_id=10";
 		console.log(url);
 		
@@ -125,7 +133,7 @@ var screenOutput = function(info){
 };
 
 
-
+/*
 $('#news').on('pageinit', function(){
         
         //Code for USA Today
@@ -143,12 +151,10 @@ $('#news').on('pageinit', function(){
 
 				$("#data-msg").html("<h2>Top Stories:</h2>");
 
-				$.each(info.data, function(index, photo){
-					var news = "<li><img src=" + photo.images.standard_resolution.url + "' alt='" + photo.user.id + "' /><h4>" + photo.user.full_name + ", <em>(" + photo.user.username +")</em></h4></li>";
+				$.each(info.data, function(index, news){
+					var news = "<li><a src=" + photo.images.standard_resolution.url + "' alt='" + photo.user.id + "' /></li>";
 
 					$("#news-output").append(news);
 				});
 		};
 });
-
-
