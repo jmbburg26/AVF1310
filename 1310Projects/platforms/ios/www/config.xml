@@ -8,26 +8,18 @@
         PhoneGap Team
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
-   
-<<<<<<< HEAD
-   <feature name="Notification">
-=======
     <feature name="Notification">
->>>>>>> master
         <param name="ios-package" value="CDVNotification" />
     </feature>
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
-<<<<<<< HEAD
     <feature name="File">
         <param name="ios-package" value="CDVFile" />
     </feature>
     <feature name="FileTransfer">
         <param name="ios-package" value="CDVFileTransfer" />
     </feature>
-
-=======
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
@@ -37,13 +29,9 @@
     <feature name="Compass">
         <param name="ios-package" value="CDVLocation" />
     </feature>
-<<<<<<< HEAD
->>>>>>> master
-=======
     <feature name="Accelerometer">
         <param name="ios-package" value="CDVAccelerometer" />
     </feature>
->>>>>>> master
     <access origin="*" />
     <access origin="http://*.usatoday.com" />
     <access origin="http://*.google.com" />
