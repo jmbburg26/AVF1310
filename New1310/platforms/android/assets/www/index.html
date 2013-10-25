@@ -17,26 +17,393 @@
     specific language governing permissions and limitations
     under the License.
 -->
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        
+        <!-- My stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        
+       
+        
+        <title>Sherlock Homework Tracker</title>
     </head>
     <body>
         <div class="app">
-            <h1>PhoneGap</h1>
+            <h1>LOADING...</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+                <p class="event received">Almost there...</p>
             </div>
         </div>
+
+        <!-- Main Home Page -->
+        <section data-role="page" id="home">
+            <div data-role="header">
+                <h1>AVF1310</h1>
+            </div>
+            <div data-role="content">
+                <h3>iOS/Android Native Features</h3>
+
+                <ul data-role="listview">
+                	<li><a href="#notify" >Notification</a></li>
+                	<li><a href="#network">Network</a></li>
+                	<li><a href="#camera">Camera</a></li>
+                	<li><a href="#location">Geolocation</a></li>
+                	<li><a href="#compass">Compass</a></li>
+                </ul>
+            </div>
+            <div data-role="content">
+                <h3>JSON-P Data APIs</h3>
+                <ul data-role="listview">
+                    <li><a href="#social">Instagram</a></li>
+                    <li><a href="#news">USA Today</a></li>
+                </ul>
+            </div>
+
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#native" data-icon="grid">Native</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+
+	    <!-- Notification Page -->
+	    <section data-role="page" id="notify">
+	    	<div data-role="header">
+                <h1>Notification Test</h1>
+            </div>
+            <div>
+            	<input type="button" id="notificationtest" value="Test Notification">
+			</div>
+
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+
+	    <!-- Network Page -->
+	    <section data-role="page" id="network">
+	    	<div data-role="header">
+                <h1>Network Test</h1>
+            </div>
+            <div>
+				<input type="button" id="networktest" value="Test Network">
+			</div>
+
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+
+	    <!-- File System Page -->
+	    <section data-role="page" id="camera">
+	    	<div data-role="header">
+                <h1>Camera Test</h1>
+            </div>
+            <div>
+				<input type="button" id="getpicture" value="Take Picture">
+			</div>
+
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+
+	    <!-- Geolocation Page -->
+	    <section data-role="page" id="location">
+	    	<div data-role="header">
+                <h1>Geolocation Test</h1>
+            </div>
+            <div>
+				<input type="button" id="getgeolocation" value="Get Location">
+			</div>
+
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+
+	    <!-- Compass Page -->
+	    <section data-role="page" id="compass">
+	    	<div data-role="header">
+                <h1>Compass Test</h1>
+            </div>
+            <div>
+				<input type="button" id="compasstest" value="Test Compass">
+			</div>
+
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+	    
+	    <!-- Social Page -->
+	    <section data-role="page" id="social">
+            <div data-role="header">
+                <h1>Social API</h1>
+            </div>
+            <div>
+                <form>
+                	<div data-role="fieldcontain">
+						<label for="searchtag">Search:</label>
+						<input type="text" name="searchtag" id="searchtag" class="required" data-clear-btn="true" placeholder="Type search term here"/>
+					</div>
+					<div>
+						<input type="submit" id="submit" value="Search" data-inline="true" data-theme="b" />
+						<input type="reset" value="Reset" data-inline="true" data-mini="true" />
+					</div>
+				</form>
+			</div>
+			<!-- Container for returned search data -->
+			<div>
+				<dic id="data-msg"><h2>Instagram Results</h2></div>
+				<ul id="data-output"></ul>	
+			</div>
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#native" data-icon="grid">Native</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+
+	    <!-- News Page -->
+	    <section data-role="page" id="news">
+            <div data-role="header">
+                <h1>News API</h1>
+            </div>
+     
+			<!-- Container for returned search data -->
+			<div>
+				<dic id="news-msg"><h2>Top Stories</h2></div>
+				<ul id="news-output"></ul>	
+			</div>
+            <!-- Persistant Footer Navigation -->
+            <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	            <div data-role="navbar" id="navbar">
+	                <ul>
+	                    <li><a href="#home" data-icon="home">Home</a></li>
+	                    <li><a href="#native" data-icon="grid">Native</a></li>
+	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#social" data-icon="plus">Social</a></li>
+	                    <li><a href="#research" data-icon="info">Research</a></li>
+	                 </ul>
+	            </div>	
+	        </div>
+	    </section>
+	    <!-- Research Page -->
+        <section data-role="page" id="research">
+        	<div data-role="header">
+                <h1>AVF1310</h1>
+            </div>
+	        <div data-role="content">
+	            <h3>Weekly Research</h3>
+	            <div data-role="collapsible-set">
+	                    
+	                <div data-role="collapsible" data-collapsed="true">
+	                    <h3>Week One</h3>
+	                    <div data-role="content" data-id="newsstream">
+							<ul>
+								<li><p>
+	                            		1.  Twitter is already quite popular for signing in to websites and apps. There are several blogs that I visit that I use my Twitter information to log in and add comments to posts. The Website Magazine has a good article about the benefits of using social for login. The Benefits of Social Login by Allison Howen. By using Twitter for our login, it allows us to pre-fill in the account information and not have to remember another username and password. It helps with our online security and gives us a better experience on the web. Payments are an interesting way to use Twitter. If Twitter were set up with a payment system such as Google Wallet or Paypal, it would allow for person-to-person payments via direct message or payments for goods at a store.
+	                                </p>
+	                            </li>
+	                            <li><p>
+	                                    2.	JSONP makes some things immensely easier for developers. JSONP helps the developer to access additional sites and information on the web without having to hard code it into their app or site. For our apps, JSONP allows us to pull in data using different APIs. We can bring the data to the user instead of the user having to go looking for it.
+	                                </p>
+	                            </li>
+	                            <li><p>
+	                                    3.	One resource that would be useful in my app is one of the many calendar APIs. The My School Holidays API would be useful for my homework application because it allows the app to automatically add school holidays to the user’s calendar. Syncing between different accounts like Google and iCloud would allow for better cross device tracking.
+	                                </p>
+	                            </li>
+	                            <li><p>
+	                                    4.	I would like to create a better interface for my app. I am thinking about going with a tiled interface that has a slight Windows 8 feel to it. I would like to add some Facebook feed integration. Having the feed from the MDVBS Facebook group or the Full Sail feed from the Schools App would be extremely helpful and would allow the user to ask question and interact with fellow students. I would also like to get Google Calendar syncing to work when adding an assignment within the app.
+	                                </p>
+	                            </li>
+	                            <li><p>
+	                                    5.	My biggest lesson learned so far has been to slow down. I had a few times where I got behind on a project and didn’t get it completely finished or not turned in on time. The next day when I wasn’t stressed out and pushed against a deadline, I was able to work through things and figure out the problems I had with my code. Not getting worked up and going through the process of proper debugging is the key to success for me.
+	                                </p>
+	                            </li>
+							</ul>
+						</div>
+	                </div>
+	                    
+	                <div data-role="collapsible" data-collapsed="true">
+	                    <h3>Week Two</h3>
+	                    <div data-role="content" data-id="newsstream">
+							<ul>
+								<li>
+									<p>
+										1.	Due to the fact that my app is a list-based app, I believe that it would not be too difficult to add the proper accessibility to my app. For the visually impaired, I could change the interface to have larger buttons that would be easier to press and have the proper tags for the screen readers to parse.
+									</p>
+	                            </li>
+	                            <li>
+									<p>
+										2.	I found some videos on YouTube about screen readers and found that often times it is hard for the user to be able to get the scope or structure of the document. They cannot see the whole text at once and have to read it one word at a time. This would create problems if things must be read in a specific sequence. 
+									</p>
+									<p>
+										One advantage I think they have is the speed in which they can ingest information. One of the videos I watched had a man listening to Screen Reader at 119 words per minute. I can’t read that fast and it’s amazing that people can do that.
+									</p>
+	                            </li>
+	                            <li>
+									<p>
+										3.	Motorola Moto X- The Moto X has been designed to be able to be controlled almost completely via voice commands. It has deep integration with Google Now and the user is able to send texts, set reminders, etc.
+									</p>
+									<p>
+										Apple iPad- The iPad is considered to be one of the best devices for accessibility due to Voice Over, large app icon interface, and a large screen combine for a very accessible device. 
+									</p>
+	                            </li>
+	                            <li>
+									<p>
+										4.	Mobile Accessibility is an app for Android that is designed to allow better use for blind and low vision users.
+									</p>
+									<p>
+										iOS 7 has added many new features for better accessibility. Things like Voice Over, Braille, and enhancements in Siri attempt to make things easier for those with poor vision and hearing.
+									</p>
+	                            </li>
+							</ul>
+						</div>
+	                </div>
+	                    
+	                <div data-role="collapsible" data-collapsed="true">
+	                    <h3>Week Three</h3>
+	                    <div data-role="content" data-id="newsstream">
+							<ul>
+								<li>
+									<p>
+										1. What are the 'top selling' app categories in the U.S.? Japan? Great Britain?
+
+										According to an article by the Business Insider called These are the 25 Best Selling iPhone Apps of All-Time, (Yarow, 2013), 21 out of the top 25 applications for iPhones are in the “Games” category. This list was compiled when Apple was about reach the 50 billion download mark for the App Store.
+										 
+										This data is further backed up in an article by the App Annie entitled World Series of Apps: Japan (Annie, 2013). Games make up 77% of total revenue in the country of Japan.
+										 
+										This theme continues again throughout Great Britain with games being the major app category.
+									</p>
+	                            </li>
+	                            <li>
+									<p>
+										2. Based on your three answers above, what might you infer about each of the markets listed?
+										The majority of mobile users spend a lot of money/time playing games on their mobile devices. While the style of games differ from region to region, games are a major area of focus for generating app revenue.
+									</p>
+	                            </li>
+	                            <li>
+									<p>
+										3. What is the average cost and bandwidth limits per user (in general) in each of the three markets? How may this impact development?
+										
+										When compared to other markets around the world, the U.S. is lagging extremely far behind the rest of the world in both connection speed and cost. In Japan, speeds range from 500Mbps to 2Gbps at a cost ranging starting at $25 a month to $51 a month.
+
+										Compare that with the US where the top speeds range up to 500Mbps for Verizon FiOS but at a cost of over $300 per month. Many companies such as Comcast in the U.S. do not currently have a bandwidth cap on their Internet but charge high prices for access.
+
+										This could have a major impact in development if the apps are too large to be downloaded over a cellular connection or have poor data speeds while connected to a Wi-Fi network.
+
+										In a report by the Huffington Post, (Isaacson, 2013), Betsy Isaacson reports how the U.S. is lagging behind in both speed and cost when compared to the rest of the world. 
+									</p>
+	                            </li>
+	                            <li>
+									<p>
+										4. And, finally, what would be your suggested strategy in project topic and global market choice? Feel free to have a first and second choice.
+
+										Based on the research, I believe the best choice would be to pursue development in the gaming category. When you compare the number of total devices worldwide and the current trends in the market, a strong mobile game has the best opportunity for generating revenue.
+
+										Apps in the Education or Productivity categories would be a good alternative.
+									</p>
+	                            </li>
+	                            <li>
+									<p>
+										References:
+										Yarow, J. (2013, May 13). these are the 25 best-selling iphone apps of all time. Retrieved from http://www.businessinsider.com/the-best-selling-iphone-apps-2013-5?op=1
+ 
+										Annie, A. (2013, Jan 28). World series of apps: Japan. Retrieved from http://blog.appannie.com/world-series-of-apps-japan/
+ 										<br>
+										Isaacson, B. (2013, July 24). U.s. internet speed slows compared to other countries: Report. Retrieved from http://www.huffingtonpost.com/2013/07/24/us-internet-speed_n_3645927.html
+									</p>
+	                            </li>
+							</ul>
+						</div>
+	                </div>
+
+	                    <!-- Persistant Footer Navigation -->
+	                <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
+	                    <div data-role="navbar" id="navbar">
+	                        <ul>
+	                            <li><a href="#home" data-icon="home">Home</a></li>
+	                            <li><a href="#native" data-icon="grid">Native</a></li>
+	                            <li><a href="#news" data-icon="grid">News</a></li>
+	                            <li><a href="#social" data-icon="plus">Social</a></li>
+	                            <li><a href="#research" data-icon="info">Research</a></li>
+	                        </ul>
+	                    </div>	
+	                </div>
+	            </div>
+	        </div>
+        </section>
+
+        <!-- Script -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-            app.initialize();
+        	app.initialize();
         </script>
     </body>
 </html>
+
