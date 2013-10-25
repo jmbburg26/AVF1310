@@ -99,7 +99,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		};
 	};
 
-
+/*
 //Code for Instagram API
 $('#submit').on('click',function(){
     
@@ -135,8 +135,37 @@ var screenOutput = function(info){
     $("#data-msg").html("<h2>Search results:</h2>");
 
     $.each(info.data, function(index, photo){
-        var pic = "<li><img src='" + photo.images.thumbnail.url + "' alt='" + photo.user.id + "' /><h4>" + photo.user.full_name + ", <em>(" + photo.user.username +")</em></h4></li>'";
+        var pic = "<li><img src='" + photo.images.low_resolution.url + "' alt='" + photo.user.id + "' /><h4>" + photo.user.full_name + ", <em>(" + photo.user.username +")</em></h4></li>'";
 
         $("#data-output").append(pic);
     });
 };
+/*
+
+//Code for USA Today
+$('#loadnews').on('click', function(){
+        
+    var newsUrl = "http://api.usatoday.com/open/articles/mobile/topnews?api_key=rafzauu4bcfd33yg379mjn9e";
+    console.log(newsUrl);
+
+    alert("News Loaded");
+
+    $.getJSON(newsUrl, newsScreenOutput);
+});
+
+  	var newsScreenOutput = function(info){
+
+        alert("Done Loading");
+        console.log(info);
+
+        $("#news-msg").html("<h2>Top Stories:</h2>");
+
+        $.each(info.data, function(index, photo){
+            var news = "<li><a href='" + newsUrl + "></a></li>'";
+
+            $("#news-output").append(news);
+        });
+    });
+    
+    */
+ 
