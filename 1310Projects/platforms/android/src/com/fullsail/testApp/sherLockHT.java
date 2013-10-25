@@ -22,7 +22,7 @@ package com.fullsail.testApp;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
-public class sherLockHT extends CordovaActivity 
+public class SherlockHT extends CordovaActivity 
 {
     @Override
     public void onCreate(Bundle savedInstanceState)

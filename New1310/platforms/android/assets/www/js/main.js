@@ -99,7 +99,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		};
 	};
 
-/*
+
 //Code for Instagram API
 $('#submit').on('click',function(){
     
@@ -115,7 +115,7 @@ $('#submit').on('click',function(){
 });
 
 var screenOutput = function(info){
-
+/*
     var searchMessage = function(){
         navigator.notification.alert(
                 'Search Complete',   
@@ -126,11 +126,11 @@ var screenOutput = function(info){
             navigator.notification.beep(1);
             navigator.notification.vibrate(2000);
     };
-
-    //alert("Search Complete");
+*/
+    alert("Search Complete");
     console.log(info);
 
-    searchMessage();
+    //searchMessage();
 
     $("#data-msg").html("<h2>Search results:</h2>");
 

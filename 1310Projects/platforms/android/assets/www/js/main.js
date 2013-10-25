@@ -98,3 +98,74 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		    alert('CompassError: ' + error.code);
 		};
 	};
+
+/*
+//Code for Instagram API
+$('#submit').on('click',function(){
+    
+    var searchTag = $('#searchtag').val();
+        
+        console.log(searchTag);
+        event.preventDefault();
+        
+        var url = "https://api.instagram.com/v1/tags/" + searchTag + "/media/recent?callback=?&amp;client_id=fc637f7a1bd04468be5f4fd4bbbea550&amp;min_id=10";
+        console.log(url);
+                
+        $.getJSON(url, screenOutput);
+});
+
+var screenOutput = function(info){
+
+    var searchMessage = function(){
+        navigator.notification.alert(
+                'Search Complete',   
+                alertDismissed,      
+                'Notification Alert', 
+                'Clear' 
+            );
+            navigator.notification.beep(1);
+            navigator.notification.vibrate(2000);
+    };
+
+    //alert("Search Complete");
+    console.log(info);
+
+    searchMessage();
+
+    $("#data-msg").html("<h2>Search results:</h2>");
+
+    $.each(info.data, function(index, photo){
+        var pic = "<li><img src='" + photo.images.low_resolution.url + "' alt='" + photo.user.id + "' /><h4>" + photo.user.full_name + ", <em>(" + photo.user.username +")</em></h4></li>'";
+
+        $("#data-output").append(pic);
+    });
+};
+/*
+
+//Code for USA Today
+$('#loadnews').on('click', function(){
+        
+    var newsUrl = "http://api.usatoday.com/open/articles/mobile/topnews?api_key=rafzauu4bcfd33yg379mjn9e";
+    console.log(newsUrl);
+
+    alert("News Loaded");
+
+    $.getJSON(newsUrl, newsScreenOutput);
+});
+
+  	var newsScreenOutput = function(info){
+
+        alert("Done Loading");
+        console.log(info);
+
+        $("#news-msg").html("<h2>Top Stories:</h2>");
+
+        $.each(info.data, function(index, photo){
+            var news = "<li><a href='" + newsUrl + "></a></li>'";
+
+            $("#news-output").append(news);
+        });
+    });
+    
+    */
+ 
