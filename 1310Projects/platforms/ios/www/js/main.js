@@ -163,7 +163,9 @@ $('#getweather').on('click', function(){
         
         };
         
-       var url = "http://api.wunderground.com/api/a31616105f2a9eba/geolookup/q/" + position.coords.latitude + ",-" + position.coords.longitude +".json";
+        getLocalWeather();
+        
+        var url = "http://api.wunderground.com/api/a31616105f2a9eba/geolookup/q/" + position.coords.latitude + ",-" + position.coords.longitude +".json";
        
         console.log(url);
                 
