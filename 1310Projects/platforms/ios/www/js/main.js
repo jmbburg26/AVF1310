@@ -146,14 +146,24 @@ var screenOutput = function(info){
 $('#getweather').on('click', function(){
         
 
-        
-        getLocalWeather();
+        var getLocalWeather = function(){
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            
+            function onSuccess(position) {
+                var element = document.getElementById('weather-output');
+                element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                                    'Longitude: ' + position.coords.longitude     + '<br />' +
+                                    '<hr />'      + element.innerHTML; 
+            }
 
-        //console.log(geoData);
-
-        event.preventDefault();
+            function onError(error) {
+                alert('code: '    + error.code    + '\n' +
+                    'message: ' + error.message + '\n');
+            }
         
-        var url = "http://api.wunderground.com/api/a31616105f2a9eba/geolookup/q/" + position.coords.latitude + ",-" + position.coords.longitude + ".json";
+        };
+        
+       var url = "http://api.wunderground.com/api/a31616105f2a9eba/geolookup/q/" + position.coords.latitude + ",-" + position.coords.longitude +".json";
        
         console.log(url);
                 
@@ -186,19 +196,3 @@ var weatherOutput = function(info){
         $("#weather-output").append(weatherurl);
     });
 };
-
-var getLocalWeather = function(){
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
-            
-            function onSuccess(position) {
-                var element = document.getElementById('weather-output');
-                element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
-                                    'Longitude: ' + position.coords.longitude     + '<br />' +
-                                    '<hr />'      + element.innerHTML; 
-            }
-
-            function onError(error) {
-                alert('code: '    + error.code    + '\n' +
-                    'message: ' + error.message + '\n');
-            }
-        };
