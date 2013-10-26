@@ -1,23 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -60,7 +41,7 @@
                 <h3>JSON-P Data APIs</h3>
                 <ul data-role="listview">
                     <li><a href="#social">Instagram</a></li>
-                    <li><a href="#news">USA Today</a></li>
+                    <li><a href="#weather">Weather</a></li>
                 </ul>
             </div>
 
@@ -69,7 +50,7 @@
 	            <div data-role="navbar" id="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -91,7 +72,7 @@
 	            <div data-role="navbar" id="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -113,7 +94,7 @@
 	            <div data-role="navbar" id="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -135,7 +116,7 @@
 	            <div data-role="navbar" id="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -157,7 +138,7 @@
 	            <div data-role="navbar" id="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -179,7 +160,7 @@
 	            <div data-role="navbar" id="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -214,7 +195,7 @@
 	            <div data-role="navbar" id="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -222,24 +203,24 @@
 	        </div>
 	    </section>
 
-	    <!-- News Page -->
-	    <section data-role="page" id="news">
+	    <!-- Weather Page -->
+	    <section data-role="page" id="weather">
             <div data-role="header">
-                <h1>News API</h1>
+                <h1>Weather API</h1>
             </div>
      
 			<!-- Container for returned search data -->
 			<div>
-				<dic id="news-msg"><h2>Top Stories</h2></div>
-				<ul id="news-output"></ul>	
+				<dic id="weather-msg"><h2>Current Conditions</h2></div>
+				<ul id="weather-output">Current Location</ul>	
 			</div>
-			<div><input type="submit" id="loadnews" value="Load" data-inline="true" data-theme="b" /></div>
+			<div><input type="submit" id="getweather" value="Get Weather" data-inline="true" data-theme="b" /></div>
             <!-- Persistant Footer Navigation -->
             <div data-role="footer" data-position="fixed" data-id="about" data-theme="b">
 	            <div data-role="navbar" id="navbar">
 	                <ul>
 	                    <li><a href="#home" data-icon="home">Home</a></li>
-	                    <li><a href="#news" data-icon="grid">News</a></li>
+	                    <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                    <li><a href="#social" data-icon="plus">Social</a></li>
 	                    <li><a href="#research" data-icon="info">Research</a></li>
 	                 </ul>
@@ -382,7 +363,7 @@
 	                    <div data-role="navbar" id="navbar">
 	                        <ul>
 	                            <li><a href="#home" data-icon="home">Home</a></li>
-	                            <li><a href="#news" data-icon="grid">News</a></li>
+	                            <li><a href="#weather" data-icon="grid">Weather</a></li>
 	                            <li><a href="#social" data-icon="plus">Social</a></li>
 	                            <li><a href="#research" data-icon="info">Research</a></li>
 	                        </ul>

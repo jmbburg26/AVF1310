@@ -16,8 +16,8 @@
     </feature>
     <access origin="http://127.0.0.1*" />
     <access origin="*" />
-    <access origin="http://*.usatoday.com" />
     <access origin="http://*.google.com" />
+    <access origin="http://api.wunderground.com/api" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="SuppressesIncrementalRendering" value="false" />
     <preference name="UIWebViewBounce" value="true" />

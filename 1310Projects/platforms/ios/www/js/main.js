@@ -141,29 +141,64 @@ var screenOutput = function(info){
     });
 };
 
-/*
-//Code for USA Today
-$('#loadnews').on('click', function(){
+
+//Code for Weather
+$('#getweather').on('click', function(){
         
-    var newsUrl = "http://api.usatoday.com/open/articles/mobile/topnews?api_key=rafzauu4bcfd33yg379mjn9e";
-    console.log(newsUrl);
 
-    alert("News Loaded");
+        
+        getLocalWeather();
 
-    $.getJSON(newsUrl, newsScreenOutput);
+        //console.log(geoData);
+
+        event.preventDefault();
+        
+        var url = "http://api.wunderground.com/api/a31616105f2a9eba/geolookup/q/" + position.coords.latitude + ",-" + position.coords.longitude + ".json";
+       
+        console.log(url);
+                
+        $.getJSON(url, weatherOutput);
 });
 
-  	var newsScreenOutput = function(info){
+var weatherOutput = function(info){
 
-        alert("Done Loading");
-        console.log(info);
+    var searchMessage = function(){
+        navigator.notification.alert(
+                'Search Complete',   
+                alertDismissed,      
+                'Notification Alert', 
+                'Clear' 
+            );
+            navigator.notification.beep(1);
+            navigator.notification.vibrate(2000);
+    };
 
-        $("#news-msg").html("<h2>Top Stories:</h2>");
+    //alert("Search Complete");
+    console.log(info);
 
-        $.each(info.data, function(index, photo){
-            var news = "<li><a href='" + newsUrl + "></a></li>'";
+    searchMessage();
 
-            $("#news-output").append(news);
-        });
+    $("#weather-msg").html("<h2>Search results:</h2>");
+
+    $.each(info.data, function(){
+        var weatherurl = "<li>Weather Data</li>";
+
+        $("#weather-output").append(weatherurl);
     });
-*/
+};
+
+var getLocalWeather = function(){
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            
+            function onSuccess(position) {
+                var element = document.getElementById('weather-output');
+                element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                                    'Longitude: ' + position.coords.longitude     + '<br />' +
+                                    '<hr />'      + element.innerHTML; 
+            }
+
+            function onError(error) {
+                alert('code: '    + error.code    + '\n' +
+                    'message: ' + error.message + '\n');
+            }
+        };

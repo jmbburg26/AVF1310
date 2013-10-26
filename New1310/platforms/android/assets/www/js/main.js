@@ -105,7 +105,7 @@ $('#submit').on('click',function(){
     
     var searchTag = $('#searchtag').val();
         
-        console.log(searchTag);
+        //console.log(searchTag);
         event.preventDefault();
         
         var url = "https://api.instagram.com/v1/tags/" + searchTag + "/media/recent?callback=?&amp;client_id=fc637f7a1bd04468be5f4fd4bbbea550&amp;min_id=10";
@@ -115,7 +115,7 @@ $('#submit').on('click',function(){
 });
 
 var screenOutput = function(info){
-/*
+
     var searchMessage = function(){
         navigator.notification.alert(
                 'Search Complete',   
@@ -126,11 +126,11 @@ var screenOutput = function(info){
             navigator.notification.beep(1);
             navigator.notification.vibrate(2000);
     };
-*/
-    alert("Search Complete");
+
+    //alert("Search Complete");
     console.log(info);
 
-    //searchMessage();
+    searchMessage();
 
     $("#data-msg").html("<h2>Search results:</h2>");
 
@@ -140,32 +140,65 @@ var screenOutput = function(info){
         $("#data-output").append(pic);
     });
 };
-/*
 
-//Code for USA Today
-$('#loadnews').on('click', function(){
+
+//Code for Weather
+$('#getweather').on('click', function(){
         
-    var newsUrl = "http://api.usatoday.com/open/articles/mobile/topnews?api_key=rafzauu4bcfd33yg379mjn9e";
-    console.log(newsUrl);
 
-    alert("News Loaded");
+        
+        getLocalWeather();
 
-    $.getJSON(newsUrl, newsScreenOutput);
+        //console.log(geoData);
+
+        event.preventDefault();
+        
+        var url = "http://api.wunderground.com/api/a31616105f2a9eba/geolookup/q/" + position.coords.latitude + ",-" + position.coords.longitude + ".json";
+       
+        console.log(url);
+                
+        $.getJSON(url, weatherOutput);
 });
 
-  	var newsScreenOutput = function(info){
+var weatherOutput = function(info){
 
-        alert("Done Loading");
-        console.log(info);
+    var searchMessage = function(){
+        navigator.notification.alert(
+                'Search Complete',   
+                alertDismissed,      
+                'Notification Alert', 
+                'Clear' 
+            );
+            navigator.notification.beep(1);
+            navigator.notification.vibrate(2000);
+    };
 
-        $("#news-msg").html("<h2>Top Stories:</h2>");
+    //alert("Search Complete");
+    console.log(info);
 
-        $.each(info.data, function(index, photo){
-            var news = "<li><a href='" + newsUrl + "></a></li>'";
+    searchMessage();
 
-            $("#news-output").append(news);
-        });
+    $("#weather-msg").html("<h2>Search results:</h2>");
+
+    $.each(info.data, function(){
+        var weatherurl = "<li></li>";
+
+        $("#weather-output").append(weatherurl);
     });
-    
-    */
- 
+};
+
+var getLocalWeather = function(){
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+            
+            function onSuccess(position) {
+                var element = document.getElementById('weather-output');
+                element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                                    'Longitude: ' + position.coords.longitude     + '<br />' +
+                                    '<hr />'      + element.innerHTML;
+            }
+
+            function onError(error) {
+                alert('code: '    + error.code    + '\n' +
+                    'message: ' + error.message + '\n');
+            }
+        };
